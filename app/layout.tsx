@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Source_Sans_3 } from "next/font/google";
+import Script from "next/script";
 import type { ReactNode } from "react";
 
 import "./globals.css";
@@ -30,6 +31,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${bodyFont.variable} ${headingFont.variable} bg-white font-body text-zinc-900 antialiased`}
       >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17979730701"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17979730701');
+          `}
+        </Script>
         {children}
       </body>
     </html>

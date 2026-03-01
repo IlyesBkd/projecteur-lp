@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ConversionButton from "./components/ConversionButton";
 
 const introParagraphs = [
   "Les projecteurs d'aujourd'hui ne se limitent plus à projeter une image : ils sont devenus de véritables appareils intelligents. La plupart se connectent facilement à un smartphone, une tablette ou un ordinateur en Wi-Fi ou Bluetooth, ce qui permet de diffuser films, séries ou présentations en un instant, sans câbles ni complications.",
@@ -230,16 +231,9 @@ function ProductCard({ product }: { product: Product }) {
                   </div>
                 )}
               </div>
-              <a
-                className={`rounded-full bg-orange-500 px-4 sm:px-6 py-2.5 sm:py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-orange-200 transition hover:bg-orange-600 ${
-                  isNexgear ? "hover:shadow-xl hover:scale-[1.02]" : ""
-                }`}
-                href={product.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <ConversionButton url={product.url} isNexgear={isNexgear}>
                 Vérifier le prix sur le site officiel
-              </a>
+              </ConversionButton>
             </div>
           </div>
         </div>
