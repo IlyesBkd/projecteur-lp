@@ -27,14 +27,14 @@ const avoidList = [
 const products = [
   {
     id: 1,
-    badge: "/projecteur-lp/badge-1.png",
+    badge: "/badge-1.png",
     name: "NEXGEAR V12 4K",
     price: "169€",
     grade: "A+",
-    productImage: "/projecteur-lp/product-nexgear.png",
-    scoreImage: "/projecteur-lp/scores-top1.png",
+    productImage: "/product-nexgear.png",
+    scoreImage: "/scores-top1.png",
     ratingLabel: "Note Globale",
-    ratingImage: "/projecteur-lp/rating-9-9.png",
+    ratingImage: "/rating-9-9.png",
     ratingCaption: "Basé sur plus de 50 000 avis",
     originalPrice: "249€",
     expertTitle: "Avis d'expert :",
@@ -59,14 +59,14 @@ const products = [
   },
   {
     id: 2,
-    badge: "/projecteur-lp/badge-2.png",
+    badge: "/badge-2.png",
     name: "Dangbei Atom",
     price: "719€",
     grade: "A",
-    productImage: "/projecteur-lp/product-dangbei.jpg",
-    scoreImage: "/projecteur-lp/scores-top3.png",
+    productImage: "/product-dangbei.jpg",
+    scoreImage: "/scores-top3.png",
     ratingLabel: "Note Globale",
-    ratingImage: "/projecteur-lp/rating-9-2.png",
+    ratingImage: "/rating-9-2.png",
     advantages: [
       "✅ L'interface VIDAA",
       "✅ Portabilité",
@@ -83,14 +83,14 @@ const products = [
   },
   {
     id: 3,
-    badge: "/projecteur-lp/badge-3.png",
+    badge: "/badge-3.png",
     name: "LG CineBeam Q",
     price: "799€",
     grade: "B",
-    productImage: "/projecteur-lp/product-lg.png",
-    scoreImage: "/projecteur-lp/scores-top4.png",
+    productImage: "/product-lg.png",
+    scoreImage: "/scores-top4.png",
     ratingLabel: "Note Globale",
-    ratingImage: "/projecteur-lp/rating-8-7.png",
+    ratingImage: "/rating-8-7.png",
     advantages: [
       "✅ Image 4K avec source laser RGB",
       "✅ Installation simple — “place & play”",
@@ -107,14 +107,14 @@ const products = [
   },
   {
     id: 4,
-    badge: "/projecteur-lp/badge-4.png",
+    badge: "/badge-4.png",
     name: "Formovie Xming Page One",
     price: "399€",
     grade: "B",
-    productImage: "/projecteur-lp/product-formovie.png",
-    scoreImage: "/projecteur-lp/scores-top5.png",
+    productImage: "/product-formovie.png",
+    scoreImage: "/scores-top5.png",
     ratingLabel: "Note Globale",
-    ratingImage: "/projecteur-lp/rating-8-3.png",
+    ratingImage: "/rating-8-3.png",
     advantages: [
       "✅ Compact et simple à installer",
       "✅ La fluidité des mouvements",
@@ -130,14 +130,14 @@ const products = [
   },
   {
     id: 5,
-    badge: "/projecteur-lp/badge-5.png",
+    badge: "/badge-5.png",
     name: "BenQ MW560 WXGA DLP",
     price: "389€",
     grade: "B-",
-    productImage: "/projecteur-lp/product-benq.jpg",
-    scoreImage: "/projecteur-lp/scores-top3.png",
+    productImage: "/product-benq.jpg",
+    scoreImage: "/scores-top3.png",
     ratingLabel: "Rating",
-    ratingImage: "/projecteur-lp/rating-7-8.png",
+    ratingImage: "/rating-7-8.png",
     advantages: [
       "✅ Définition Full HD 1080p",
       "✅ Diagonale image : 1 m à 3 m",
@@ -283,7 +283,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-zinc-900">
       <section className="mx-auto flex w-full max-w-5xl flex-col gap-4 sm:gap-6 px-4 pb-8 pt-6 sm:px-6 sm:pb-10 sm:pt-8">
         <Image
-          src="/projecteur-lp/avisconso.avif"
+          src="/avisconso.avif"
           alt="Avis Conso"
           width={200}
           height={40}
@@ -301,7 +301,7 @@ export default function Home() {
         <div className="rounded-2xl md:rounded-3xl border border-zinc-200 bg-white p-3 sm:p-4 md:p-6 shadow-sm">
           <div className="flex flex-col gap-3 sm:gap-4 sm:flex-row sm:items-center">
             <Image
-              src="/projecteur-lp/author-david.jpg"
+              src="/author-david.jpg"
               alt="David Quentin"
               width={80}
               height={80}
@@ -328,7 +328,7 @@ export default function Home() {
         </a>
         <div className="relative w-full h-44 sm:h-56 md:h-72 rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/projecteur-lp/hero-projector.jpg"
+            src="/hero-projector.jpg"
             alt="Projection cinéma à la maison"
             fill
             priority
