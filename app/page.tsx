@@ -229,7 +229,9 @@ function ProductCard({ product }: { product: Product }) {
                 className={`rounded-full bg-orange-500 px-4 sm:px-6 py-2.5 sm:py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-orange-200 transition hover:bg-orange-600 ${
                   isNexgear ? "hover:shadow-xl hover:scale-[1.02]" : ""
                 }`}
-                href="#"
+                href={isNexgear ? "https://www.nex-gear.fr/" : "#"}
+                target={isNexgear ? "_blank" : "_self"}
+                rel={isNexgear ? "noopener noreferrer" : ""}
               >
                 Vérifier le prix sur le site officiel
               </a>

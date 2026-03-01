@@ -17,8 +17,11 @@ const headingFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Section Nexgear",
-  description: "Reproduction d'une section produit en Next.js et Tailwind CSS",
+  title: "5 Meilleurs Vidéoprojecteurs Testés 2026 - AVIS CONSO",
+  description: "Nous avons testé plus de 30 modèles pour identifier les 5 meilleurs vidéoprojecteurs de 2026. Guide d'achat complet avec avis d'experts et comparatifs.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
