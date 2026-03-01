@@ -56,6 +56,7 @@ const products = [
       "Parmi tous les modèles que nous avons testés cette année, le NEXGEAR s'est rapidement imposé comme l'une des plus belles découvertes. Dès la première prise en main, on ressent une vraie qualité de fabrication : matériaux agréables, finitions soignées et conception solide. Mais le plus impressionnant reste la qualité d'image. L'objectif offre une excellente clarté et une transmission lumineuse précise, avec des couleurs vives et naturelles. Autre atout notable : sa technologie de réduction de lumière bleue, rarement présente dans cette gamme de prix. Résultat : une image nette et confortable pour les yeux, même lors de longues séances cinéma. 4K réelle, le NEXGEAR séduit par sa reproduction fidèle des couleurs et sa facilité d'utilisation. La mise au point automatique, la correction trapézoïdale et son interface simple permettent une installation rapide, sans réglages compliqués. Idéal pour : - Créer une véritable expérience cinéma à la maison — que ce soit dans le salon, la chambre ou sur la terrasse. - Regarder Netflix, Prime Video ou YouTube en grand format, sans perte de qualité. - Jouer sur console ou PC avec une image fluide et des couleurs immersives. - Projeter des présentations ou contenus professionnels, grâce à sa clarté d'image et sa compatibilité universelle. - Emporter le projecteur en week-end ou en extérieur, grâce à son format compact et sa facilité d'installation. Et tout cela, pour un prix bien inférieur à celui des grandes marques. C'est ce parfait équilibre entre performance, design et accessibilité qui lui vaut sa première place dans notre sélection 2026.",
     editorialTip:
       "💡 Astuce de la rédaction : En cliquant sur notre lien ci-dessous, une remise de 20% s'applique souvent automatiquement sur leur site officiel selon les périodes.",
+    url: "https://www.nex-gear.fr/",
   },
   {
     id: 2,
@@ -80,6 +81,7 @@ const products = [
       "❌ Contraste et noirs limités",
       "❌ Réglages automatiques imparfaits",
     ],
+    url: "https://www.fnac.com/DANGBEI-Atom-1080P-Laser-Videoprojecteur-1200-ISO-Lumens-avec-Licence-systeme-Google-TV/a20510486/w-4?Origin=SEA_GOOGLE_FL_TV",
   },
   {
     id: 3,
@@ -104,6 +106,7 @@ const products = [
       "❌ Prix élevé pour un projecteur ultra-portable",
       "❌ Télécommande peu pratique",
     ],
+    url: "https://www.darty.com/nav/achat/hifi_video/videoprojecteur-videoprojecteur/videoprojecteur_cinema/lg_hu710pb.html?ofmp=1050911565&dartycid=sem_free-listing_MP-tv--video--home-cinema_videoprojection",
   },
   {
     id: 4,
@@ -127,6 +130,7 @@ const products = [
       "❌ Niveaux de bruit",
       "❌ Fuite de lumière",
     ],
+    url: "https://www.boulanger.com/ref/9000688718",
   },
   {
     id: 5,
@@ -149,6 +153,7 @@ const products = [
       "❌ Zoom et décalage d'objectif limités",
       "❌ Consommation électrique élevée",
     ],
+    url: "https://www.fnac.com/mp47005776/BenQ-MW560-Projecteur-DLP-portable-3D-4000-ANSI-lumens-WXGA-1280-x-800-16-10-720p/w-4?oref=8d524139-d707-e0fb-8ddf-32bb2a6dc90a&Origin=CMP_GOOGLE_FL_TV",
   },
 ];
 
@@ -229,9 +234,9 @@ function ProductCard({ product }: { product: Product }) {
                 className={`rounded-full bg-orange-500 px-4 sm:px-6 py-2.5 sm:py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-orange-200 transition hover:bg-orange-600 ${
                   isNexgear ? "hover:shadow-xl hover:scale-[1.02]" : ""
                 }`}
-                href={isNexgear ? "https://www.nex-gear.fr/" : "#"}
-                target={isNexgear ? "_blank" : "_self"}
-                rel={isNexgear ? "noopener noreferrer" : ""}
+                href={product.url}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Vérifier le prix sur le site officiel
               </a>
