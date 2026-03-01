@@ -29,7 +29,7 @@ const products = [
     id: 1,
     badge: "/projecteur-lp/badge-1.png",
     name: "NEXGEAR V12 4K",
-    price: "169€",
+    price: "129.99€",
     grade: "A+",
     productImage: "/projecteur-lp/product-nexgear.png",
     scoreImage: "/projecteur-lp/scores-top1.png",
