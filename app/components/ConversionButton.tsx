@@ -5,6 +5,7 @@ import { useState } from "react";
 interface ConversionButtonProps {
   url: string;
   isNexgear?: boolean;
+  trackConversion?: boolean;
   children: React.ReactNode;
 }
 
@@ -26,6 +27,7 @@ declare global {
 export default function ConversionButton({
   url,
   isNexgear = false,
+  trackConversion = false,
   children,
 }: ConversionButtonProps) {
   const [isTracking, setIsTracking] = useState(false);
@@ -43,27 +45,33 @@ export default function ConversionButton({
       }
     };
 
-    // Fallback: redirect after 300ms if gtag is blocked or fails
-    const fallbackTimer = setTimeout(redirect, 300);
+    // Only track conversion for NEXGEAR
+    if (trackConversion) {
+      // Fallback: redirect after 300ms if gtag is blocked or fails
+      const fallbackTimer = setTimeout(redirect, 300);
 
-    // Try to track with Google Ads
-    if (typeof window !== "undefined" && window.gtag) {
-      try {
-        window.gtag("event", "conversion", {
-          send_to: "AW-17979730701/2tBNCPLAgIEcEI3Ws_1C",
-          value: 1.0,
-          currency: "EUR",
-          event_callback: () => {
-            clearTimeout(fallbackTimer);
-            redirect();
-          },
-        });
-      } catch (error) {
-        // If gtag fails, fallback will handle redirect
-        console.error("Conversion tracking error:", error);
+      // Try to track with Google Ads
+      if (typeof window !== "undefined" && window.gtag) {
+        try {
+          window.gtag("event", "conversion", {
+            send_to: "AW-17979730701/2tBNCPLAgIEcEI3Ws_1C",
+            value: 1.0,
+            currency: "EUR",
+            event_callback: () => {
+              clearTimeout(fallbackTimer);
+              redirect();
+            },
+          });
+        } catch (error) {
+          // If gtag fails, fallback will handle redirect
+          console.error("Conversion tracking error:", error);
+        }
       }
+      // If gtag doesn't exist (AdBlocker), fallback timer will redirect
+    } else {
+      // For other products, redirect immediately
+      redirect();
     }
-    // If gtag doesn't exist (AdBlocker), fallback timer will redirect
   };
 
   return (

@@ -231,7 +231,7 @@ function ProductCard({ product }: { product: Product }) {
                   </div>
                 )}
               </div>
-              <ConversionButton url={product.url} isNexgear={isNexgear}>
+              <ConversionButton url={product.url} isNexgear={isNexgear} trackConversion={isNexgear}>
                 Vérifier le prix sur le site officiel
               </ConversionButton>
             </div>
