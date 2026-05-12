@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import ConversionButton from "../components/ConversionButton";
+import ConversionButton from "../../components/ConversionButton";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
 
 export const metadata: Metadata = {
   title: "Meilleur Écran CarPlay Voiture 2026 | Comparatif & Avis",
@@ -34,6 +35,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.avisconso.fr/carplay-voiture",
+    languages: {
+      "fr-FR": "https://www.avisconso.fr/carplay-voiture",
+      "en-US": "https://www.avisconso.fr/en/carplay-voiture",
+    },
   },
 };
 
@@ -428,6 +433,11 @@ export default function CarplayVoiturePage() {
           height={40}
           priority
           className="h-8 sm:h-10 w-auto object-contain"
+        />
+        <LanguageSwitcher
+          currentLocale="fr"
+          frenchPath="/carplay-voiture"
+          englishPath="/en/carplay-voiture"
         />
         <div className="space-y-1.5 sm:space-y-2">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight tracking-tight">

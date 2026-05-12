@@ -1,5 +1,37 @@
 import Image from "next/image";
-import ConversionButton from "./components/ConversionButton";
+import type { Metadata } from "next";
+import ConversionButton from "../components/ConversionButton";
+import LanguageSwitcher from "../components/LanguageSwitcher";
+
+export const metadata: Metadata = {
+  title: "5 Meilleurs Vidéoprojecteurs Testés 2026 - AVIS CONSO",
+  description:
+    "Nous avons testé plus de 30 modèles pour identifier les 5 meilleurs vidéoprojecteurs de 2026. Guide d'achat complet avec avis d'experts et comparatifs.",
+  alternates: {
+    canonical: "https://www.avisconso.fr/",
+    languages: {
+      "fr-FR": "https://www.avisconso.fr/",
+      "en-US": "https://www.avisconso.fr/en",
+    },
+  },
+  openGraph: {
+    title: "5 Meilleurs Vidéoprojecteurs Testés 2026 - AVIS CONSO",
+    description:
+      "Nous avons testé plus de 30 modèles pour identifier les 5 meilleurs vidéoprojecteurs de 2026.",
+    type: "article",
+    url: "https://www.avisconso.fr/",
+    images: [
+      {
+        url: "/projecteur-lp/hero-projector.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Projection cinéma à la maison",
+      },
+    ],
+    locale: "fr_FR",
+    siteName: "AVIS CONSO",
+  },
+};
 
 const introParagraphs = [
   "Les projecteurs d'aujourd'hui ne se limitent plus à projeter une image : ils sont devenus de véritables appareils intelligents. La plupart se connectent facilement à un smartphone, une tablette ou un ordinateur en Wi-Fi ou Bluetooth, ce qui permet de diffuser films, séries ou présentations en un instant, sans câbles ni complications.",
@@ -291,6 +323,7 @@ export default function Home() {
           priority
           className="h-8 sm:h-10 w-auto object-contain"
         />
+        <LanguageSwitcher currentLocale="fr" frenchPath="/" englishPath="/en" />
         <div className="space-y-1.5 sm:space-y-2">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight tracking-tight">
             5 Meilleurs Vidéoprojecteurs Testés 2026

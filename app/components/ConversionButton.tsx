@@ -6,6 +6,7 @@ interface ConversionButtonProps {
   url: string;
   isNexgear?: boolean;
   trackConversion?: boolean;
+  currency?: string;
   children: React.ReactNode;
 }
 
@@ -28,6 +29,7 @@ export default function ConversionButton({
   url,
   isNexgear = false,
   trackConversion = false,
+  currency = "EUR",
   children,
 }: ConversionButtonProps) {
   const [isTracking, setIsTracking] = useState(false);
@@ -56,7 +58,7 @@ export default function ConversionButton({
           window.gtag("event", "conversion", {
             send_to: "AW-17979730701/2tBNCPLAgIEcEI3Ws_1C",
             value: 1.0,
-            currency: "EUR",
+            currency,
             event_callback: () => {
               clearTimeout(fallbackTimer);
               redirect();

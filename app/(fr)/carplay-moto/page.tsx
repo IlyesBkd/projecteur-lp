@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import ConversionButton from "../components/ConversionButton";
+import ConversionButton from "../../components/ConversionButton";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
 
 export const metadata: Metadata = {
   title: "Meilleur Écran CarPlay Moto 2026 | Top 5 & Avis",
@@ -34,6 +35,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.avisconso.fr/carplay-moto",
+    languages: {
+      "fr-FR": "https://www.avisconso.fr/carplay-moto",
+      "en-US": "https://www.avisconso.fr/en/carplay-moto",
+    },
   },
 };
 
@@ -444,6 +449,11 @@ export default function CarplayMotoPage() {
           height={40}
           priority
           className="h-8 sm:h-10 w-auto object-contain"
+        />
+        <LanguageSwitcher
+          currentLocale="fr"
+          frenchPath="/carplay-moto"
+          englishPath="/en/carplay-moto"
         />
         <div className="space-y-1.5 sm:space-y-2">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight tracking-tight">
