@@ -55,6 +55,7 @@ interface ComparisonPageProps {
   rankingTitle: string;
   products: ProductData[];
   productCtaLabel: string;
+  productCurrency?: string;
   structuredData?: object[];
   faqTitle?: string;
   faqItems?: FaqItem[];
@@ -65,9 +66,11 @@ interface ComparisonPageProps {
 function ProductCard({
   product,
   productCtaLabel,
+  productCurrency,
 }: {
   product: ProductData;
   productCtaLabel: string;
+  productCurrency: string;
 }) {
   const isMain = product.id === 1;
 
@@ -156,7 +159,7 @@ function ProductCard({
                 url={product.url}
                 isNexgear={isMain}
                 trackConversion={isMain}
-                currency="USD"
+                currency={productCurrency}
               >
                 {productCtaLabel}
               </ConversionButton>
@@ -233,6 +236,7 @@ export default function ComparisonPage({
   rankingTitle,
   products,
   productCtaLabel,
+  productCurrency = "USD",
   structuredData = [],
   faqTitle,
   faqItems,
@@ -365,6 +369,7 @@ export default function ComparisonPage({
             key={product.id}
             product={product}
             productCtaLabel={productCtaLabel}
+            productCurrency={productCurrency}
           />
         ))}
       </section>
